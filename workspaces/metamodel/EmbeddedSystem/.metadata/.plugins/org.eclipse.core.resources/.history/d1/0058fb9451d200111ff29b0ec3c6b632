@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="embeddedSystem" nsURI="http://www.example.org/embeddedSystem"
+    nsPrefix="embeddedSystem">
+  <eClassifiers xsi:type="ecore:EClass" name="SystemModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemstructure" upperBound="-1"
+        eType="#//SystemStructure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systembehavior" upperBound="-1"
+        eType="#//SystemBehavior" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemStructure">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="board" eType="#//Board"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" upperBound="-1"
+        eType="#//Connection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemBehavior">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Board">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pingroup" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pingroup" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PinGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pin" upperBound="-1" eType="#//Pin"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pin">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComponentType">
+    <eLiterals name="DIGITAL_SENSOR"/>
+    <eLiterals name="ANALOG_SENSOR" value="1"/>
+    <eLiterals name="DIGITAL_ACTOR" value="2"/>
+    <eLiterals name="ANALOG_ACTOR" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PinType">
+    <eLiterals name="DIGITAL_IN"/>
+    <eLiterals name="DIGITAL_OUT" value="1"/>
+    <eLiterals name="ANALOG_IN" value="2"/>
+    <eLiterals name="ANALOG_OUT" value="3"/>
+    <eLiterals name="INTERRUPT" value="4"/>
+    <eLiterals name="GND" value="5"/>
+    <eLiterals name="VCC_SV" value="6"/>
+    <eLiterals name="VCC_3_3V" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Pin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//Pin"/>
+  </eClassifiers>
+</ecore:EPackage>

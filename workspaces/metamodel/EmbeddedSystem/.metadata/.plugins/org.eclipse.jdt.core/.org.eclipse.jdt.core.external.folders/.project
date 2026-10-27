@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>/home/haider/.p2/pool/plugins/com.sun.jna_5.19.1.v20260612-1000</location>
+		</link>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>/home/haider/.p2/pool/plugins/com.sun.jna.source_5.19.1.v20260612-1000</location>
+		</link>
+	</linkedResources>
+</projectDescription>

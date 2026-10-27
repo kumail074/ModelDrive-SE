@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<embeddedSystem:SystemModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:embeddedSystem="http://www.example.org/embeddedSystem" name="MySystemModel">
+  <systemstructure name="MyArduino">
+    <board name="ArduinoUno">
+      <pingroup>
+        <pin name="LED_Pin"/>
+      </pingroup>
+    </board>
+    <component name="LED">
+      <pingroup>
+        <pin name="IN"/>
+        <pin name="GND"/>
+      </pingroup>
+    </component>
+    <component name="Button">
+      <pingroup/>
+    </component>
+    <connection target="//@systemstructure.0/@component.0/@pingroup.0/@pin.0" src="//@systemstructure.0/@board/@pingroup.0/@pin.0"/>
+  </systemstructure>
+</embeddedSystem:SystemModel>

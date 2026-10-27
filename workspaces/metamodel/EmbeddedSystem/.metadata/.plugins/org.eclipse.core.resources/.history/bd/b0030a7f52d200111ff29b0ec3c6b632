@@ -1,0 +1,958 @@
+/**
+ */
+package embeddedSystem;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see embeddedSystem.EmbeddedSystemFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface EmbeddedSystemPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "embeddedSystem";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://www.example.org/embeddedSystem";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "embeddedSystem";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	EmbeddedSystemPackage eINSTANCE = embeddedSystem.impl.EmbeddedSystemPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.NamedElementImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.SystemModelImpl <em>System Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.SystemModelImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemModel()
+	 * @generated
+	 */
+	int SYSTEM_MODEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_MODEL__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Systemstructure</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_MODEL__SYSTEMSTRUCTURE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Systembehavior</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_MODEL__SYSTEMBEHAVIOR = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>System Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_MODEL_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>System Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_MODEL_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.SystemStructureImpl <em>System Structure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.SystemStructureImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemStructure()
+	 * @generated
+	 */
+	int SYSTEM_STRUCTURE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Board</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE__BOARD = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE__COMPONENT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE__CONNECTION = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>System Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>System Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STRUCTURE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.SystemBehaviorImpl <em>System Behavior</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.SystemBehaviorImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemBehavior()
+	 * @generated
+	 */
+	int SYSTEM_BEHAVIOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BEHAVIOR__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>System Behavior</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BEHAVIOR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>System Behavior</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BEHAVIOR_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.BoardImpl <em>Board</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.BoardImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getBoard()
+	 * @generated
+	 */
+	int BOARD = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOARD__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pingroup</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOARD__PINGROUP = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Board</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOARD_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Board</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOARD_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.ComponentImpl <em>Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.ComponentImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getComponent()
+	 * @generated
+	 */
+	int COMPONENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pingroup</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__PINGROUP = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.PinGroupImpl <em>Pin Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.PinGroupImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPinGroup()
+	 * @generated
+	 */
+	int PIN_GROUP = 5;
+
+	/**
+	 * The feature id for the '<em><b>Pin</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_GROUP__PIN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Pin Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_GROUP_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Pin Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_GROUP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.PinImpl <em>Pin</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.PinImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPin()
+	 * @generated
+	 */
+	int PIN = 6;
+
+	/**
+	 * The feature id for the '<em><b>Pin Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN__PIN_NR = 0;
+
+	/**
+	 * The number of structural features of the '<em>Pin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Pin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.impl.ConnectionImpl <em>Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.impl.ConnectionImpl
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getConnection()
+	 * @generated
+	 */
+	int CONNECTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__TARGET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__SRC = 1;
+
+	/**
+	 * The number of structural features of the '<em>Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.ComponentType <em>Component Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.ComponentType
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getComponentType()
+	 * @generated
+	 */
+	int COMPONENT_TYPE = 9;
+
+	/**
+	 * The meta object id for the '{@link embeddedSystem.PinType <em>Pin Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see embeddedSystem.PinType
+	 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPinType()
+	 * @generated
+	 */
+	int PIN_TYPE = 10;
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.SystemModel <em>System Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Model</em>'.
+	 * @see embeddedSystem.SystemModel
+	 * @generated
+	 */
+	EClass getSystemModel();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.SystemModel#getSystemstructure <em>Systemstructure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Systemstructure</em>'.
+	 * @see embeddedSystem.SystemModel#getSystemstructure()
+	 * @see #getSystemModel()
+	 * @generated
+	 */
+	EReference getSystemModel_Systemstructure();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.SystemModel#getSystembehavior <em>Systembehavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Systembehavior</em>'.
+	 * @see embeddedSystem.SystemModel#getSystembehavior()
+	 * @see #getSystemModel()
+	 * @generated
+	 */
+	EReference getSystemModel_Systembehavior();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.SystemStructure <em>System Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Structure</em>'.
+	 * @see embeddedSystem.SystemStructure
+	 * @generated
+	 */
+	EClass getSystemStructure();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link embeddedSystem.SystemStructure#getBoard <em>Board</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Board</em>'.
+	 * @see embeddedSystem.SystemStructure#getBoard()
+	 * @see #getSystemStructure()
+	 * @generated
+	 */
+	EReference getSystemStructure_Board();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.SystemStructure#getComponent <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Component</em>'.
+	 * @see embeddedSystem.SystemStructure#getComponent()
+	 * @see #getSystemStructure()
+	 * @generated
+	 */
+	EReference getSystemStructure_Component();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.SystemStructure#getConnection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Connection</em>'.
+	 * @see embeddedSystem.SystemStructure#getConnection()
+	 * @see #getSystemStructure()
+	 * @generated
+	 */
+	EReference getSystemStructure_Connection();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.SystemBehavior <em>System Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Behavior</em>'.
+	 * @see embeddedSystem.SystemBehavior
+	 * @generated
+	 */
+	EClass getSystemBehavior();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.Board <em>Board</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Board</em>'.
+	 * @see embeddedSystem.Board
+	 * @generated
+	 */
+	EClass getBoard();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.Board#getPingroup <em>Pingroup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pingroup</em>'.
+	 * @see embeddedSystem.Board#getPingroup()
+	 * @see #getBoard()
+	 * @generated
+	 */
+	EReference getBoard_Pingroup();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component</em>'.
+	 * @see embeddedSystem.Component
+	 * @generated
+	 */
+	EClass getComponent();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.Component#getPingroup <em>Pingroup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pingroup</em>'.
+	 * @see embeddedSystem.Component#getPingroup()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Pingroup();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.PinGroup <em>Pin Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pin Group</em>'.
+	 * @see embeddedSystem.PinGroup
+	 * @generated
+	 */
+	EClass getPinGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link embeddedSystem.PinGroup#getPin <em>Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pin</em>'.
+	 * @see embeddedSystem.PinGroup#getPin()
+	 * @see #getPinGroup()
+	 * @generated
+	 */
+	EReference getPinGroup_Pin();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.Pin <em>Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pin</em>'.
+	 * @see embeddedSystem.Pin
+	 * @generated
+	 */
+	EClass getPin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link embeddedSystem.Pin#getPinNr <em>Pin Nr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin Nr</em>'.
+	 * @see embeddedSystem.Pin#getPinNr()
+	 * @see #getPin()
+	 * @generated
+	 */
+	EAttribute getPin_PinNr();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connection</em>'.
+	 * @see embeddedSystem.Connection
+	 * @generated
+	 */
+	EClass getConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link embeddedSystem.Connection#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see embeddedSystem.Connection#getTarget()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link embeddedSystem.Connection#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see embeddedSystem.Connection#getSrc()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Src();
+
+	/**
+	 * Returns the meta object for class '{@link embeddedSystem.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see embeddedSystem.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link embeddedSystem.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see embeddedSystem.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
+
+	/**
+	 * Returns the meta object for enum '{@link embeddedSystem.ComponentType <em>Component Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Component Type</em>'.
+	 * @see embeddedSystem.ComponentType
+	 * @generated
+	 */
+	EEnum getComponentType();
+
+	/**
+	 * Returns the meta object for enum '{@link embeddedSystem.PinType <em>Pin Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Pin Type</em>'.
+	 * @see embeddedSystem.PinType
+	 * @generated
+	 */
+	EEnum getPinType();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	EmbeddedSystemFactory getEmbeddedSystemFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.SystemModelImpl <em>System Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.SystemModelImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemModel()
+		 * @generated
+		 */
+		EClass SYSTEM_MODEL = eINSTANCE.getSystemModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Systemstructure</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_MODEL__SYSTEMSTRUCTURE = eINSTANCE.getSystemModel_Systemstructure();
+
+		/**
+		 * The meta object literal for the '<em><b>Systembehavior</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_MODEL__SYSTEMBEHAVIOR = eINSTANCE.getSystemModel_Systembehavior();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.SystemStructureImpl <em>System Structure</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.SystemStructureImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemStructure()
+		 * @generated
+		 */
+		EClass SYSTEM_STRUCTURE = eINSTANCE.getSystemStructure();
+
+		/**
+		 * The meta object literal for the '<em><b>Board</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_STRUCTURE__BOARD = eINSTANCE.getSystemStructure_Board();
+
+		/**
+		 * The meta object literal for the '<em><b>Component</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_STRUCTURE__COMPONENT = eINSTANCE.getSystemStructure_Component();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_STRUCTURE__CONNECTION = eINSTANCE.getSystemStructure_Connection();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.SystemBehaviorImpl <em>System Behavior</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.SystemBehaviorImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getSystemBehavior()
+		 * @generated
+		 */
+		EClass SYSTEM_BEHAVIOR = eINSTANCE.getSystemBehavior();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.BoardImpl <em>Board</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.BoardImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getBoard()
+		 * @generated
+		 */
+		EClass BOARD = eINSTANCE.getBoard();
+
+		/**
+		 * The meta object literal for the '<em><b>Pingroup</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOARD__PINGROUP = eINSTANCE.getBoard_Pingroup();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.ComponentImpl <em>Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.ComponentImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getComponent()
+		 * @generated
+		 */
+		EClass COMPONENT = eINSTANCE.getComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Pingroup</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__PINGROUP = eINSTANCE.getComponent_Pingroup();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.PinGroupImpl <em>Pin Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.PinGroupImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPinGroup()
+		 * @generated
+		 */
+		EClass PIN_GROUP = eINSTANCE.getPinGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIN_GROUP__PIN = eINSTANCE.getPinGroup_Pin();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.PinImpl <em>Pin</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.PinImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPin()
+		 * @generated
+		 */
+		EClass PIN = eINSTANCE.getPin();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin Nr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIN__PIN_NR = eINSTANCE.getPin_PinNr();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.ConnectionImpl <em>Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.ConnectionImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getConnection()
+		 * @generated
+		 */
+		EClass CONNECTION = eINSTANCE.getConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__TARGET = eINSTANCE.getConnection_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__SRC = eINSTANCE.getConnection_Src();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.impl.NamedElementImpl
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.ComponentType <em>Component Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.ComponentType
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getComponentType()
+		 * @generated
+		 */
+		EEnum COMPONENT_TYPE = eINSTANCE.getComponentType();
+
+		/**
+		 * The meta object literal for the '{@link embeddedSystem.PinType <em>Pin Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see embeddedSystem.PinType
+		 * @see embeddedSystem.impl.EmbeddedSystemPackageImpl#getPinType()
+		 * @generated
+		 */
+		EEnum PIN_TYPE = eINSTANCE.getPinType();
+
+	}
+
+} //EmbeddedSystemPackage

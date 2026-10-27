@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/embeddedSystem/src-gen" creationIcons="false"
+    editDirectory="/embeddedSystem.edit/src-gen" editorDirectory="/embeddedSystem.editor/src-gen"
+    modelPluginID="embeddedSystem" modelName="EmbeddedSystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="25.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>embeddedSystem.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="EmbeddedSystem" disposableProviderFactory="true" ecorePackage="embeddedSystem.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="embeddedSystem.ecore#//ComponentType">
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//ComponentType/DIGITAL_SENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//ComponentType/ANALOG_SENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//ComponentType/DIGITAL_ACTOR"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//ComponentType/ANALOG_ACTOR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="embeddedSystem.ecore#//PinType">
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/DIGITAL_IN"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/DIGITAL_OUT"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/ANALOG_IN"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/ANALOG_OUT"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/INTERRUPT"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/GND"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/VCC_SV"/>
+      <genEnumLiterals ecoreEnumLiteral="embeddedSystem.ecore#//PinType/VCC_3_3V"/>
+    </genEnums>
+    <genClasses ecoreClass="embeddedSystem.ecore#//SystemModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//SystemModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//SystemModel/systemstructure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//SystemModel/systembehavior"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//SystemStructure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//SystemStructure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//SystemStructure/board"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//SystemStructure/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//SystemStructure/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//SystemBehavior">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//SystemBehavior/name"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//Board">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//Board/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//Board/pingroup"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//Component/pingroup"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//PinGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//PinGroup/pin"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//Pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute embeddedSystem.ecore#//Pin/pinNr"/>
+    </genClasses>
+    <genClasses ecoreClass="embeddedSystem.ecore#//Connection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//Connection/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference embeddedSystem.ecore#//Connection/src"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

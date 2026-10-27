@@ -1,0 +1,105 @@
+/**
+ */
+package embeddedSystem;
+
+import org.eclipse.emf.ecore.EFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see embeddedSystem.EmbeddedSystemPackage
+ * @generated
+ */
+public interface EmbeddedSystemFactory extends EFactory {
+	/**
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	EmbeddedSystemFactory eINSTANCE = embeddedSystem.impl.EmbeddedSystemFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>System Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Model</em>'.
+	 * @generated
+	 */
+	SystemModel createSystemModel();
+
+	/**
+	 * Returns a new object of class '<em>System Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Structure</em>'.
+	 * @generated
+	 */
+	SystemStructure createSystemStructure();
+
+	/**
+	 * Returns a new object of class '<em>System Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Behavior</em>'.
+	 * @generated
+	 */
+	SystemBehavior createSystemBehavior();
+
+	/**
+	 * Returns a new object of class '<em>Board</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Board</em>'.
+	 * @generated
+	 */
+	Board createBoard();
+
+	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
+
+	/**
+	 * Returns a new object of class '<em>Pin Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pin Group</em>'.
+	 * @generated
+	 */
+	PinGroup createPinGroup();
+
+	/**
+	 * Returns a new object of class '<em>Pin</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pin</em>'.
+	 * @generated
+	 */
+	Pin createPin();
+
+	/**
+	 * Returns a new object of class '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection</em>'.
+	 * @generated
+	 */
+	Connection createConnection();
+
+	/**
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
+	EmbeddedSystemPackage getEmbeddedSystemPackage();
+
+} //EmbeddedSystemFactory

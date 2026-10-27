@@ -1,0 +1,259 @@
+/**
+ */
+package embeddedSystem.impl;
+
+import embeddedSystem.EmbeddedSystemFactory;
+import embeddedSystem.EmbeddedSystemPackage;
+import embeddedSystem.SystemBehavior;
+import embeddedSystem.SystemModel;
+import embeddedSystem.SystemStructure;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class EmbeddedSystemPackageImpl extends EPackageImpl implements EmbeddedSystemPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemStructureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemBehaviorEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see embeddedSystem.EmbeddedSystemPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private EmbeddedSystemPackageImpl() {
+		super(eNS_URI, EmbeddedSystemFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link EmbeddedSystemPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static EmbeddedSystemPackage init() {
+		if (isInited)
+			return (EmbeddedSystemPackage) EPackage.Registry.INSTANCE.getEPackage(EmbeddedSystemPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredEmbeddedSystemPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		EmbeddedSystemPackageImpl theEmbeddedSystemPackage = registeredEmbeddedSystemPackage instanceof EmbeddedSystemPackageImpl
+				? (EmbeddedSystemPackageImpl) registeredEmbeddedSystemPackage
+				: new EmbeddedSystemPackageImpl();
+
+		isInited = true;
+
+		// Create package meta-data objects
+		theEmbeddedSystemPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theEmbeddedSystemPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theEmbeddedSystemPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(EmbeddedSystemPackage.eNS_URI, theEmbeddedSystemPackage);
+		return theEmbeddedSystemPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemModel() {
+		return systemModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSystemModel_Name() {
+		return (EAttribute) systemModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemStructure() {
+		return systemStructureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSystemStructure_Name() {
+		return (EAttribute) systemStructureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemBehavior() {
+		return systemBehaviorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSystemBehavior_Name() {
+		return (EAttribute) systemBehaviorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EmbeddedSystemFactory getEmbeddedSystemFactory() {
+		return (EmbeddedSystemFactory) getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated)
+			return;
+		isCreated = true;
+
+		// Create classes and their features
+		systemModelEClass = createEClass(SYSTEM_MODEL);
+		createEAttribute(systemModelEClass, SYSTEM_MODEL__NAME);
+
+		systemStructureEClass = createEClass(SYSTEM_STRUCTURE);
+		createEAttribute(systemStructureEClass, SYSTEM_STRUCTURE__NAME);
+
+		systemBehaviorEClass = createEClass(SYSTEM_BEHAVIOR);
+		createEAttribute(systemBehaviorEClass, SYSTEM_BEHAVIOR__NAME);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized)
+			return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(systemModelEClass, SystemModel.class, "SystemModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSystemModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, SystemModel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemStructureEClass, SystemStructure.class, "SystemStructure", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSystemStructure_Name(), ecorePackage.getEString(), "name", null, 0, 1, SystemStructure.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemBehaviorEClass, SystemBehavior.class, "SystemBehavior", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSystemBehavior_Name(), ecorePackage.getEString(), "name", null, 0, 1, SystemBehavior.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //EmbeddedSystemPackageImpl

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: embeddedSystem.edit;singleton:=true
+Automatic-Module-Name: embeddedSystem.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: embeddedSystem.provider.EmbeddedSystemEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-25
+Export-Package: embeddedSystem.provider
+Require-Bundle: org.eclipse.core.runtime,
+ embeddedSystem;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

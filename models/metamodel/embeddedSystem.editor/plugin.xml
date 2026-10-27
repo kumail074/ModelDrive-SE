@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated embeddedSystem -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="embeddedSystem.presentation.EmbeddedSystemModelWizardID"
+            name="%_UI_EmbeddedSystemModelWizard_label"
+            class="embeddedSystem.presentation.EmbeddedSystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EmbeddedSystemModelFile.gif">
+         <description>%_UI_EmbeddedSystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated embeddedSystem -->
+      <editor
+            id="embeddedSystem.presentation.EmbeddedSystemEditorID"
+            name="%_UI_EmbeddedSystemEditor_label"
+            icon="icons/full/obj16/EmbeddedSystemModelFile.gif"
+            extensions="embeddedsystem"
+            class="embeddedSystem.presentation.EmbeddedSystemEditor"
+            contributorClass="embeddedSystem.presentation.EmbeddedSystemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

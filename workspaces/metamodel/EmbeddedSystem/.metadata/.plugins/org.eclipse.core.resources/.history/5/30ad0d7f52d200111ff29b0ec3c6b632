@@ -1,0 +1,586 @@
+/**
+ */
+package embeddedSystem.impl;
+
+import embeddedSystem.Board;
+import embeddedSystem.Component;
+import embeddedSystem.ComponentType;
+import embeddedSystem.Connection;
+import embeddedSystem.EmbeddedSystemFactory;
+import embeddedSystem.EmbeddedSystemPackage;
+import embeddedSystem.NamedElement;
+import embeddedSystem.Pin;
+import embeddedSystem.PinGroup;
+import embeddedSystem.PinType;
+import embeddedSystem.SystemBehavior;
+import embeddedSystem.SystemModel;
+import embeddedSystem.SystemStructure;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class EmbeddedSystemPackageImpl extends EPackageImpl implements EmbeddedSystemPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemStructureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemBehaviorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boardEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pinGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pinEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum componentTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum pinTypeEEnum = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see embeddedSystem.EmbeddedSystemPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private EmbeddedSystemPackageImpl() {
+		super(eNS_URI, EmbeddedSystemFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link EmbeddedSystemPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static EmbeddedSystemPackage init() {
+		if (isInited)
+			return (EmbeddedSystemPackage) EPackage.Registry.INSTANCE.getEPackage(EmbeddedSystemPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredEmbeddedSystemPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		EmbeddedSystemPackageImpl theEmbeddedSystemPackage = registeredEmbeddedSystemPackage instanceof EmbeddedSystemPackageImpl
+				? (EmbeddedSystemPackageImpl) registeredEmbeddedSystemPackage
+				: new EmbeddedSystemPackageImpl();
+
+		isInited = true;
+
+		// Create package meta-data objects
+		theEmbeddedSystemPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theEmbeddedSystemPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theEmbeddedSystemPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(EmbeddedSystemPackage.eNS_URI, theEmbeddedSystemPackage);
+		return theEmbeddedSystemPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemModel() {
+		return systemModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemModel_Systemstructure() {
+		return (EReference) systemModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemModel_Systembehavior() {
+		return (EReference) systemModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemStructure() {
+		return systemStructureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemStructure_Board() {
+		return (EReference) systemStructureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemStructure_Component() {
+		return (EReference) systemStructureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemStructure_Connection() {
+		return (EReference) systemStructureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemBehavior() {
+		return systemBehaviorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBoard() {
+		return boardEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBoard_Pingroup() {
+		return (EReference) boardEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getComponent() {
+		return componentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getComponent_Pingroup() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPinGroup() {
+		return pinGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPinGroup_Pin() {
+		return (EReference) pinGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPin() {
+		return pinEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPin_PinNr() {
+		return (EAttribute) pinEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConnection() {
+		return connectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConnection_Target() {
+		return (EReference) connectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConnection_Src() {
+		return (EReference) connectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute) namedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getComponentType() {
+		return componentTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getPinType() {
+		return pinTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EmbeddedSystemFactory getEmbeddedSystemFactory() {
+		return (EmbeddedSystemFactory) getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated)
+			return;
+		isCreated = true;
+
+		// Create classes and their features
+		systemModelEClass = createEClass(SYSTEM_MODEL);
+		createEReference(systemModelEClass, SYSTEM_MODEL__SYSTEMSTRUCTURE);
+		createEReference(systemModelEClass, SYSTEM_MODEL__SYSTEMBEHAVIOR);
+
+		systemStructureEClass = createEClass(SYSTEM_STRUCTURE);
+		createEReference(systemStructureEClass, SYSTEM_STRUCTURE__BOARD);
+		createEReference(systemStructureEClass, SYSTEM_STRUCTURE__COMPONENT);
+		createEReference(systemStructureEClass, SYSTEM_STRUCTURE__CONNECTION);
+
+		systemBehaviorEClass = createEClass(SYSTEM_BEHAVIOR);
+
+		boardEClass = createEClass(BOARD);
+		createEReference(boardEClass, BOARD__PINGROUP);
+
+		componentEClass = createEClass(COMPONENT);
+		createEReference(componentEClass, COMPONENT__PINGROUP);
+
+		pinGroupEClass = createEClass(PIN_GROUP);
+		createEReference(pinGroupEClass, PIN_GROUP__PIN);
+
+		pinEClass = createEClass(PIN);
+		createEAttribute(pinEClass, PIN__PIN_NR);
+
+		connectionEClass = createEClass(CONNECTION);
+		createEReference(connectionEClass, CONNECTION__TARGET);
+		createEReference(connectionEClass, CONNECTION__SRC);
+
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+
+		// Create enums
+		componentTypeEEnum = createEEnum(COMPONENT_TYPE);
+		pinTypeEEnum = createEEnum(PIN_TYPE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized)
+			return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		systemModelEClass.getESuperTypes().add(this.getNamedElement());
+		systemStructureEClass.getESuperTypes().add(this.getNamedElement());
+		systemBehaviorEClass.getESuperTypes().add(this.getNamedElement());
+		boardEClass.getESuperTypes().add(this.getNamedElement());
+		componentEClass.getESuperTypes().add(this.getNamedElement());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(systemModelEClass, SystemModel.class, "SystemModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystemModel_Systemstructure(), this.getSystemStructure(), null, "systemstructure", null, 0,
+				-1, SystemModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemModel_Systembehavior(), this.getSystemBehavior(), null, "systembehavior", null, 0, -1,
+				SystemModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemStructureEClass, SystemStructure.class, "SystemStructure", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystemStructure_Board(), this.getBoard(), null, "board", null, 0, 1, SystemStructure.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemStructure_Component(), this.getComponent(), null, "component", null, 0, -1,
+				SystemStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemStructure_Connection(), this.getConnection(), null, "connection", null, 0, -1,
+				SystemStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemBehaviorEClass, SystemBehavior.class, "SystemBehavior", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(boardEClass, Board.class, "Board", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBoard_Pingroup(), this.getPinGroup(), null, "pingroup", null, 0, -1, Board.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponent_Pingroup(), this.getPinGroup(), null, "pingroup", null, 0, -1, Component.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pinGroupEClass, PinGroup.class, "PinGroup", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPinGroup_Pin(), this.getPin(), null, "pin", null, 0, -1, PinGroup.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(pinEClass, Pin.class, "Pin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPin_PinNr(), ecorePackage.getEInt(), "pinNr", null, 0, 1, Pin.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnection_Target(), this.getPin(), null, "target", null, 0, 1, Connection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Src(), this.getPin(), null, "src", null, 0, 1, Connection.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(componentTypeEEnum, ComponentType.class, "ComponentType");
+		addEEnumLiteral(componentTypeEEnum, ComponentType.DIGITAL_SENSOR);
+		addEEnumLiteral(componentTypeEEnum, ComponentType.ANALOG_SENSOR);
+		addEEnumLiteral(componentTypeEEnum, ComponentType.DIGITAL_ACTOR);
+		addEEnumLiteral(componentTypeEEnum, ComponentType.ANALOG_ACTOR);
+
+		initEEnum(pinTypeEEnum, PinType.class, "PinType");
+		addEEnumLiteral(pinTypeEEnum, PinType.DIGITAL_IN);
+		addEEnumLiteral(pinTypeEEnum, PinType.DIGITAL_OUT);
+		addEEnumLiteral(pinTypeEEnum, PinType.ANALOG_IN);
+		addEEnumLiteral(pinTypeEEnum, PinType.ANALOG_OUT);
+		addEEnumLiteral(pinTypeEEnum, PinType.INTERRUPT);
+		addEEnumLiteral(pinTypeEEnum, PinType.GND);
+		addEEnumLiteral(pinTypeEEnum, PinType.VCC_SV);
+		addEEnumLiteral(pinTypeEEnum, PinType.VCC_33V);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //EmbeddedSystemPackageImpl
